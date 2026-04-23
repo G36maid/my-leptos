@@ -1,4 +1,5 @@
 use leptos::prelude::*;
+use leptos_router::components::A;
 
 #[component]
 pub fn NotFound() -> impl IntoView {
@@ -7,10 +8,10 @@ pub fn NotFound() -> impl IntoView {
             <div class="not-found-content">
                 <h1 class="not-found-code">"404"</h1>
                 <p class="not-found-text">"Page not found"</p>
-                <a href="/" class="btn btn-primary">
+                <A href="/" attr:class="btn btn-primary">
                     "Go Home"
                     <span class="btn-arrow">"→"</span>
-                </a>
+                </A>
             </div>
         </div>
     }

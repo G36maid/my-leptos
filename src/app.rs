@@ -1,5 +1,5 @@
 use leptos::prelude::*;
-use leptos_router::components::{Route, Router, Routes};
+use leptos_router::components::{Route, Router, Routes, A};
 use leptos_router::path;
 
 use crate::components::{About, Contact, Home, Navbar, NotFound, Projects};
@@ -27,10 +27,10 @@ pub fn App() -> impl IntoView {
                         <div class="footer-links">
                             <div class="footer-col">
                                 <h4>"Navigate"</h4>
-                                <a href="/">"Home"</a>
-                                <a href="/about">"About"</a>
-                                <a href="/projects">"Projects"</a>
-                                <a href="/contact">"Contact"</a>
+                                <A href="/">"Home"</A>
+                                <A href="/about">"About"</A>
+                                <A href="/projects">"Projects"</A>
+                                <A href="/contact">"Contact"</A>
                             </div>
                             <div class="footer-col">
                                 <h4>"Connect"</h4>

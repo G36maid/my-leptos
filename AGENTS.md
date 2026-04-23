@@ -22,7 +22,7 @@ trunk build --release
 
 - **Edition 2024** (`Cargo.toml`).
 - `leptos` uses `features = ["csr"]`; `leptos_router` has no CSR feature — don't add one.
-- `<A>` from `leptos_router` does **not** support `class` or `on:click`. Use plain `<a>` tags for styled nav links.
+- `<A>` from `leptos_router` supports `class` via `attr:class="..."` and `on:click` normally. Use `<A>` for all router-aware navigation links. Plain `<a>` bypasses the router base path.
 - The `view!` macro rejects certain Unicode characters (e.g. `✦`) outside string literals. Keep special chars inside `"..."` strings only.
 - Static data in components (e.g. skill arrays) must be `static` bindings, not `let`, or the view closure borrow checker will reject them.
 - `cargo fmt` enforces alphabetical `mod`/`pub use` ordering in `mod.rs` files.
