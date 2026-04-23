@@ -17,7 +17,7 @@ pub fn Navbar() -> impl IntoView {
     let is_active = move |path: &'static str| {
         let current = location.pathname.get();
         if path == "/" {
-            current == "/" || current == ""
+            current == "/" || current.is_empty()
         } else {
             current.starts_with(path)
         }
