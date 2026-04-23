@@ -72,6 +72,9 @@ jobs:
       - name: Build with Trunk
         run: trunk build --release --public-url /my-leptos/
 
+      - name: Copy index.html as 404.html for SPA routing
+        run: cp dist/index.html dist/404.html
+
       - name: Upload dist artifacts
         uses: actions/upload-pages-artifact@v3
         with:
