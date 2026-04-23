@@ -7,7 +7,7 @@ use crate::components::{About, Contact, Home, Navbar, NotFound, Projects};
 #[component]
 pub fn App() -> impl IntoView {
     view! {
-        <Router>
+        <Router base="/my-leptos">
             <div class="app">
                 <Navbar/>
                 <main class="main-content">
