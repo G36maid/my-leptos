@@ -70,7 +70,7 @@ jobs:
         uses: jetli/trunk-action@v0.5.0
 
       - name: Build with Trunk
-        run: trunk build --release
+        run: trunk build --release --public-url /my-leptos/
 
       - name: Upload dist artifacts
         uses: actions/upload-pages-artifact@v3
